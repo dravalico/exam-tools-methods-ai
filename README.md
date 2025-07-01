@@ -1,5 +1,3 @@
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
 # Word Count for Large Text Files
 
 This repository contains code developed for the exam of the *Introduction to Tools and Methods in AI* course. It implements a simple Python script to count the top-10 most frequent words in a given text file.
@@ -17,7 +15,7 @@ After profiling the base code using [Scalene](https://github.com/plasma-umass/sc
 - Converts the full text to lowercase and splits it once
 - Drawback: **high memory usage**
 
-As shown in the image below, loading and processing the entire file results in significantly high memory usage. Note that the profiling was performed using the 50MB `testfile.txt` file.
+As shown in the image below, loading and processing the entire file results in significantly high memory usage. Note that the profiling was performed using the 47MB `testfile.txt` file.
 
 ![Scalene profiling - Base version](base.png)
 
