@@ -1,3 +1,29 @@
-# Count words in a "large" file
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
-This repository contains the code for the exam of Introduction to Tools and Methods in AI course. The code is a very simple implementation of a top 10 word counter given a txt file.
+# Word Count for Large Text Files
+
+This repository contains code developed for the exam of the *Introduction to Tools and Methods in AI* course. It implements a simple Python script to count the top-10 most frequent words in a given text file.
+
+The project uses [`uv`](https://github.com/astral-sh/uv) to manage the Python virtual environment and dependencies, ensuring reproducibility and easy setup.
+
+## Differences Between the Two Word Count Versions
+
+After profiling the base code using [Scalene](https://github.com/plasma-umass/scalene), I created a separate branch named `dev` to experiment with improvements. The enhancements were verified through Scalene profiling to ensure measurable gains. For each version, two screenshots are included showing the profiling results; these screenshots are also committed as files in the repository. Since the improved version showed better performance, I merged it into the main branch, while the `dev` branch remains active for further experimentation.
+
+### Version 1 (Simple)
+
+- Reads the entire file into memory
+- Uses a `defaultdict` to count word occurrences
+- Converts the full text to lowercase and splits it once
+- Drawback: high memory usage, especially with large files
+
+![Scalene profiling - Base version](base.png)
+
+### Version 2 (Improved)
+
+- Reads the file **line by line** to minimize memory consumption
+- Utilises `collections.Counter` for more efficient and concise counting
+- Processes the file incrementally, avoiding loading it entirely at once
+- Result: improved memory management and better performance on large datasets
+
+![Scalene profiling - Improved version](improved.png)
