@@ -1,6 +1,6 @@
 # Word Count for Large Text Files
 
-This repository contains code developed for the exam of the *Introduction to Tools and Methods in AI* course. It implements a simple Python script to count the top-10 most frequent words in a given text file.
+This repository contains code developed for the exam of the *Introduction to Tools and Methods for Research in AI* course. It implements a simple Python script to count the top-10 most frequent words in a given text file.
 
 The project uses [`uv`](https://github.com/astral-sh/uv) to manage the Python virtual environment and dependencies, ensuring reproducibility and easy setup.
 
