@@ -15,15 +15,19 @@ After profiling the base code using [Scalene](https://github.com/plasma-umass/sc
 - Reads the entire file into memory
 - Uses a `defaultdict` to count word occurrences
 - Converts the full text to lowercase and splits it once
-- Drawback: high memory usage, especially with large files
+- Drawback: **high memory usage**
+
+As shown in the image below, loading and processing the entire file results in significantly high memory usage. Note that the profiling was performed using the 50MB `testfile.txt` file.
 
 ![Scalene profiling - Base version](base.png)
 
 ### Version 2 (Improved)
 
 - Reads the file **line by line** to minimize memory consumption
-- Utilises `collections.Counter` for more efficient and concise counting
+- Uses `collections.Counter` for more efficient and concise counting
 - Processes the file incrementally, avoiding loading it entirely at once
-- Result: improved memory management and better performance on large datasets
+- Result: improved memory usage and better time consuption
+
+Compared to the previous image, the processing time is slightly reduced. More importantly, by reading and processing the file line by line, the memory consumption decreases by approximately 89%.
 
 ![Scalene profiling - Improved version](improved.png)
