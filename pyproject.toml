@@ -1,0 +1,7 @@
+[project]
+name = "exam-tools-methods-ai"
+version = "0.1.0"
+description = "Repository for the exam of Introduction to Tools and Methods in AI course"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
